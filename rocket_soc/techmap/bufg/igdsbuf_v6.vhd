@@ -24,12 +24,10 @@ end;
 architecture rtl of igdsbuf_virtex6 is
 begin
 
-      x1 : IBUFDS_GTXE1  port map (
+      x1 : IBUFDS  port map (
          I     => gclk_p,
          IB    => gclk_n,
-         CEB   => '0',
-         O     => o_clk,
-         ODIV2 => open
+         O     => o_clk
       );
 
 end;
